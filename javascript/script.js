@@ -12,7 +12,7 @@ const addTaskToDOM = task => {
   let newTaskDescription = document.createElement('p');
   newTaskDescription.innerHTML = `${task.description}`;
 
-//check Task 
+  //check Task 
   if (task.done === 'true') {
     newCheckbox.setAttribute('checked', 'checked');
     newTaskDescription.innerHTML = `<del>${task.description}</del>`;
@@ -20,7 +20,7 @@ const addTaskToDOM = task => {
     newTaskDescription.innerHTML = `${task.description}`;
   }
 
-//create img to element
+  //create img to element
   const newImg = document.createElement('img');
   newImg.src = `img/trash-can-icon.png`;
   newImg.value = task._id;
@@ -35,20 +35,20 @@ const addTaskToDOM = task => {
 
 // create function to test add eventlistener to change set the task.done value
 const checkBtn = (btn, task) =>
-    btn.addEventListener('change', event => {
-      let task2 = event.target.value;
-      if (task.done === 'true') {
-        task2.done = 'true';
-        updateTaskAPI(task2.id, task2).then(() =>
-          allTaskItems(getTaskAPI())
-        );
-      } else {
-        task2.done = 'false';
-        updateTaskAPI(task2.id, task2).then(() =>
-          allTaskItems(getTaskAPI())
-        );
-      }
-});
+  btn.addEventListener('change', event => {
+    let task2 = event.target.value;
+    if (task.done === 'true') {
+      task2.done = 'true';
+      updateTaskAPI(task2.id, task2).then(() =>
+        allTaskItems(getTaskAPI())
+      );
+    } else {
+      task2.done = 'false';
+      updateTaskAPI(task2.id, task2).then(() =>
+        allTaskItems(getTaskAPI())
+      );
+    }
+  });
 
 // function to add eventlistener to trash icon to delete a task
 const delBtn = (btn, li) =>
@@ -78,4 +78,3 @@ addButton.addEventListener('click', async event => {
   addTaskAPI(mytask).then(() => allTaskItems(getTaskAPI()));
   addField.value = '';
 });
-

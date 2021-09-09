@@ -1,71 +1,79 @@
-*{
+* {
     margin: 0;
     padding: 0;
     outline: 0;
 }
-body{
+
+body {
     background-color: white;
 }
 
-.box-container{
+.box-container {
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     background-color: #495af7;
-    box-shadow: 0 2px 8px rgba(0,0,0,.16);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .16);
     width: 460px;
     height: 150px;
     text-align: center;
-    font-family: 'Nunito',sans-serif;
-   
+    font-family: 'Nunito', sans-serif;
+
 }
-h1{
+
+h1 {
     margin: 12px 0;
 }
-.box-items{
+
+.box-items {
     margin: 12px 0;
-    
+
 }
-#new-text-field{
-	list-style: none;
+
+#new-text-field {
+    list-style: none;
     padding: 12px 5px;
     background-color: rgb(255, 251, 251);
     margin: 12px 0;
-    box-shadow: 0 2px 8px rgba(0,0,0,.16);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .16);
     border-radius: 3px;
     transition: .4s;
 }
-#new-text-field{
+
+#new-text-field {
     padding: 6px 4px;
     width: 70%;
 }
-#button-task-Add{
+
+#button-task-Add {
     padding: 7px 12px;
     background-color: #c9051f;
     border: none;
     border-radius: 4px;
-    color:#fffafa
-
+    color: #fffafa
 }
-.ul-list{
+
+.ul-list {
     height: 150px;
     overflow-y: scroll
 }
-ul{
+
+ul {
     padding: 12px;
-   
+
 }
-li{
+
+li {
     list-style: none;
     padding: 12px 4px;
     background-color: rgb(253, 252, 252);
     margin: 12px 0;
-    box-shadow: 0 4px 8px rgba(0,0,0,.16);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .16);
     border-radius: 3px;
     transition: .4s;
 }
 
-li:hover{
+li:hover {
     background-color: #faf9f9;
 }
